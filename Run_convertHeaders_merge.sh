@@ -14,10 +14,10 @@ for X in {1..4}; do
 # Loop to iterate through each set of files, to attach cell barcodes per sample
                 INDEX_NUMBER=$(($M - 1 ))
                 BARCODE=${INDEX_BARCODES[$INDEX_NUMBER]}
-                INPUT_FILE_R1=${SAMPLE_ID}_${BARCODE}_L00${N}_R1.fastq.gz
-                INPUT_FILE_R2=${SAMPLE_ID}_${BARCODE}_L00${N}_R2.fastq.gz
-		OUTPUT_FILE_R1=illumina_${SAMPLE_ID}_${BARCODE}_L00${N}_R1.fastq.gz
-        	OUTPUT_FILE_R2=illumina_${SAMPLE_ID}_${BARCODE}_L00${N}_R2.fastq.gz
+                INPUT_FILE_R1=${SAMPLE_ID}_${BARCODE}_S1_L00${N}_R1_001.fastq.gz
+                INPUT_FILE_R2=${SAMPLE_ID}_${BARCODE}_S1_L00${N}_R2_001.fastq.gz
+		OUTPUT_FILE_R1=illumina_${SAMPLE_ID}_${BARCODE}_S1_L00${N}_R1_001.fastq.gz
+        	OUTPUT_FILE_R2=illumina_${SAMPLE_ID}_${BARCODE}_S1_L00${N}_R2_001.fastq.gz
                 python convertHeaders_LJ.py -i $INPUT_FILE_R1 -o $OUTPUT_FILE_R1 &
         	python convertHeaders_LJ.py -i $INPUT_FILE_R2 -o $OUTPUT_FILE_R2
                 done
