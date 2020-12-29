@@ -70,7 +70,7 @@ def parseBGI(header):
         tile_number = int(seq_header[20:])
 
         # Pack into dictionary
-        elements_dict = {"instrument": "MGISEQ-2000", "run_number": 1, "sample_barcode": sample_barcode, "lane": lane_id, "x-pos": x_id, "y-pos": y_id, "tile": tile_number, "flowcell-id": flowcell_id, "read_no": paired_read_direction}
+        elements_dict = {"instrument": "MGISEQ2000", "run_number": 1, "sample_barcode": sample_barcode, "lane": lane_id, "x-pos": x_id, "y-pos": y_id, "tile": tile_number, "flowcell-id": flowcell_id, "read_no": paired_read_direction}
         return elements_dict
 
     else:
