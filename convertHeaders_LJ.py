@@ -67,7 +67,7 @@ def parseBGI(header):
         y_id = int(y_id.replace("R", ""))
 
         # Get run number (last part of the string)
-        tile_number = int(seq_header[20:])
+        tile_number = seq_header[20:]
 
         # Pack into dictionary
         elements_dict = {"instrument": "MGISEQ2000", "run_number": 1, "sample_barcode": sample_barcode, "lane": lane_id, "x-pos": x_id, "y-pos": y_id, "tile": tile_number, "flowcell-id": flowcell_id, "read_no": paired_read_direction}
